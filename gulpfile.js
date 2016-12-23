@@ -8,7 +8,7 @@ var connect = require('gulp-connect');
 
 var mockServerStart = false;
 
-//mock api data
+//mock api data by liufulin,liufl,thunder
 gulp.task('mockApi', function () {
     gulp.src('./mocks/tpl/*.json')
         .pipe(mock()) // Just add this line to what ever files you wanna mocked.
