@@ -1,0 +1,16 @@
+{
+  "data|2-3": {
+    "code": "String:7",
+    "percent": "String:7",
+    "tels|2-5": "Number:10|x.xxxxxxxx",
+    "array|5-10": "String:7-12",
+    "time": "Date|YYYY-MM-DD",
+    "String:4|2-5": {
+      "name": "String:7|xxx.xxxx",
+      "time": "String:7",
+      "String:2-5": "Number:10"
+    },
+    "avatar": "Image|200x200",
+    "thumbnails|2-5": "Image|200x300-400x500"
+  }
+}
