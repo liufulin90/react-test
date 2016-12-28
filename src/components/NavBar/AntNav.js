@@ -36,7 +36,7 @@ class AntNav extends Component {
         </div>
         <Menu onClick={e=>this.handleClick(e)} mode="horizontal" selectedKeys={[this.state.current]}>
           <Menu.Item key="msg">
-            <Link to='/msg'>
+            <Link to='/msgList'>
               <Icon type="appstore"/> Message
             </Link>
           </Menu.Item>
