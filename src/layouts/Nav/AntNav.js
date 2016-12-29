@@ -11,11 +11,9 @@ class AntNav extends Component {
     this.state = {
       current: 'home'
     }
-    console.log(this.props)
   }
 
   handleClick (e) {
-    console.log(e)
     this.setState({
       current: e.key
     })
@@ -40,13 +38,13 @@ class AntNav extends Component {
               <Icon type="appstore"/> Message
             </Link>
           </Menu.Item>
-          <Menu.Item key="todo">
-            <Link to='/todo'>
+          <Menu.Item key="work">
+            <Link to='/work'>
               <Icon type="setting"/> Work
             </Link>
           </Menu.Item>
           <Menu.Item key="map">
-            <Link to="map">
+            <Link to="/map">
               <Icon type=""/>Map
             </Link>
           </Menu.Item>

@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './NavBar/'
+import NavBar from '../layouts/Nav/'
 
 let DevTools
 if (__DEV__ && __COMPONENT_DEVTOOLS__) {

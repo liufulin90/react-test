@@ -10,6 +10,14 @@ const routes = {
       component: require('../components/Msg/').default
     },
     {
+      path: '/map',
+      component: require('../components/Map/').default
+    },
+    {
+      path: '/work',
+      component: require('../components/Work/').default
+    },
+    {
       path: 'redirect',
       component: require('../components/Redirect').default
     },

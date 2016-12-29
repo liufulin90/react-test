@@ -24,7 +24,6 @@ class MsgList extends Component {
     this.setState({
       visible: true
     })
-    console.log(this.state.visible)
   }
 
   const
