@@ -9,7 +9,7 @@ class AntNav extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      current: 'home'
+      current: ''
     }
   }
 
@@ -33,9 +33,9 @@ class AntNav extends Component {
           </IndexLink>
         </div>
         <Menu onClick={e=>this.handleClick(e)} mode="horizontal" selectedKeys={[this.state.current]}>
-          <Menu.Item key="msg">
-            <Link to='/msgList'>
-              <Icon type="appstore"/> Message
+          <Menu.Item key="home">
+            <Link to='/home'>
+              <Icon type="appstore"/> Home
             </Link>
           </Menu.Item>
           <Menu.Item key="work">

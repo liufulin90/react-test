@@ -1,10 +1,14 @@
 const routes = {
   path: '/',
-  component: require('../components/App').default,
+  component: require('../layouts/App').default,
   indexRoute: {
     component: require('../components/Welcome').default
   },
   childRoutes: [
+    {
+      path: '/home',
+      component: require('../views/Home/').default
+    },
     {
       path: '/msgList',
       component: require('../components/Msg/').default
