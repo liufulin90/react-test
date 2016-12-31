@@ -86,7 +86,27 @@ class Home extends Component {
     }
   }
 
+  const
+  getWorkExp = () => {
+    let url = 'http://localhost:8082/workExperience.json'
+    fetch(url, {
+      method: 'GET',
+      mode: 'no-cors',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+      // body: '请求参数'
+    }).then(function (res) {
+      console.log('Response succeeded?', JSON.stringify(res.ok))
+      console.log(res)
+    }).catch(function (e) {
+      console.log('fetch fail', e)
+    })
+  }
+
   render() {
+    this.getWorkExp()
     return (
       <div>
         <WorkExperience workExperience={this.state.workExperience}/>

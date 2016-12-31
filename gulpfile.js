@@ -1,7 +1,7 @@
 /** * [gulp description] * @type {[type]} */
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var mock = require('gulp-mock');
+// var mock = require('gulp-mock');
 var mockServer = require('gulp-mock-server');
 var proxy = require('http-proxy-middleware');
 var connect = require('gulp-connect');
@@ -11,7 +11,7 @@ var mockServerStart = false;
 //mock api data by liufulin,liufl,thunder
 gulp.task('mockApi', function () {
     gulp.src('./mocks/tpl/*.json')
-        .pipe(mock()) // Just add this line to what ever files you wanna mocked.
+        // .pipe(mock()) // Just add this line to what ever files you wanna mocked.
         .pipe(gulp.dest('./mocks/data'))
 });
 //response mock server for dev
@@ -22,6 +22,13 @@ gulp.task('mockServer', function () {
             port: 8999
         }));
 });
+gulp.task('testConnect', function () {
+  connect.server({
+    root: ['./api'],
+    debug: true,
+    port: 8082,
+  })
+})
 /**
  * [connectServer description]
  * @return {[type]} [description]
