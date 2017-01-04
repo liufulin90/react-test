@@ -15,7 +15,6 @@ class NavBar extends Component {
   }
 
   render() {
-    console.log(this.props.navs)
     return (
       <AntNav />
     )

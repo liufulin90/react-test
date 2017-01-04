@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
-class Map extends Component {
+class MapContainer extends Component {
+  /*
   static defaultProps = {
     mapData: [
       {
@@ -13,19 +14,21 @@ class Map extends Component {
       }
     ]
   }
+  */
 
   constructor(props) {
     super(props)
   }
 
   render() {
+    console.log(this.props.mapdata)
     return (
       <div>
-        mapdata: { JSON.stringify(this.props.mapData)}
+        mapdata: { JSON.stringify(this.props.mapdata)}
       </div>
     )
   }
 
 }
 
-export default Map
+export default MapContainer

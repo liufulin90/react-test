@@ -1,0 +1,18 @@
+{
+  "data":[
+    {
+      "companyName": "中科创达软件有限公司",
+      "job": "研发工程师",
+      "timeSlot": "2014.03 - 至今",
+      "describe": "Firefox os gaia层开发；WEB前端开发；PHP开发",
+      "isPrimary": true
+    },
+    {
+      "companyName": "四川省科学技术信息研究所",
+      "job": "java工程师",
+      "timeSlot": "2013.07 - 2014.02",
+      "describe": "使用j2ee技术开发网站及系统",
+      "isPrimary": false
+    }
+  ]
+}

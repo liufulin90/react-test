@@ -15,7 +15,7 @@ const routes = {
     },
     {
       path: '/map',
-      component: require('../components/Map/').default
+      component: require('../views/Map/').default
     },
     {
       path: '/work',
