@@ -5,10 +5,10 @@ import MapService from '../../services/MapService'
 
 class Map extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
-      mapdata: null
+      mapdata: []
     }
     MapService.getMapData().then(data => {
       this.setState({
@@ -17,7 +17,7 @@ class Map extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <AddressList {...this.state}/>

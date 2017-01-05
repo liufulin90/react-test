@@ -19,7 +19,7 @@ const routes = {
     },
     {
       path: '/work',
-      component: require('../components/Work/').default
+      component: require('../views/Work/').default
     },
     {
       path: 'redirect',

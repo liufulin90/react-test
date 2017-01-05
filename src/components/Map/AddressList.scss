@@ -22,11 +22,12 @@ $baseColor: #cc9376 #ff0000 #229965;
   &:hover{
     color: nth($baseColor, 2);
   }
-  &:after{
+  &:hover:after{
     content: 'x';
     position: absolute;
     right: 10px;
     font-size: $fontSize * 2;
+    line-height: $baseLineHeight / $baseLineHeight;
   }
 }
 
