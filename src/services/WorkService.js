@@ -10,6 +10,10 @@ class WorkService {
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error => console.error(error))
   }
 
+  /**
+   * 获取项目经验
+   * @returns {Promise.<T>}
+   */
   getProjectExperience() {
     let url = '/static/api/projectExperience.json'
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error => console.error(error))
