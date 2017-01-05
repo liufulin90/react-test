@@ -21,10 +21,10 @@ class MapContainer extends Component {
   }
 
   render() {
-    console.log(this.props.mapdata)
     return (
       <div>
-        mapdata: { JSON.stringify(this.props.mapdata)}
+        mapdata:
+
       </div>
     )
   }

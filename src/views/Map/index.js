@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import MapContainer from '../../components/Map/MapContainer'
+// import MapContainer from '../../components/Map/MapContainer'
+import AddressList from '../../components/Map/AddressList'
 import MapService from '../../services/MapService'
 
 class Map extends Component {
@@ -19,7 +20,7 @@ class Map extends Component {
   render () {
     return (
       <div>
-        <MapContainer mapdata={this.state.mapdata}/>
+        <AddressList {...this.state}/>
       </div>
     )
   }

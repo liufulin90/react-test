@@ -1,0 +1,38 @@
+$baseLineHeight: 2.5 !default;
+$fontSize: 12px;
+$border-1px: 1px solid #333;
+$borderDirection: bottom !default;
+$baseColor: #cc9376 #ff0000 #229965;
+
+.address-wrap {
+  line-height: $baseLineHeight;
+}
+
+.address-wrap ul,
+.address-wrap ul li {
+  font-size: $fontSize;
+  display: block;
+}
+
+.address-wrap ul li {
+  /*
+  特殊变量使用 # {}
+  */
+  border-#{$borderDirection}: $border-1px;
+  &:hover{
+    color: nth($baseColor, 2);
+  }
+  &:after{
+    content: 'x';
+    position: absolute;
+    right: 10px;
+    font-size: $fontSize * 2;
+  }
+}
+
+.address-wrap ul li:nth-child(odd) {
+  color: nth($baseColor, 1);
+  &:hover{
+    color: nth($baseColor, 3);
+  }
+}
