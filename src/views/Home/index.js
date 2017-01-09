@@ -35,11 +35,7 @@ class Home extends Component {
           name: 'xxx',
           time: '2016/12/12'
         }
-      ],
-      visibleTodos: [{
-        text: 'xxxxx',
-        completed: true
-      }]
+      ]
     }
   }
 
@@ -47,7 +43,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        home
+        Please add something...
         <Todo {...this.state}/>
       </div>
     )

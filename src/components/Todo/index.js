@@ -1,36 +1,49 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from '../../redux/actions/todoAction'
+import React, {Component, PropTypes} from 'react'
+import {connect} from 'react-redux'
+import {addTodo, completeTodo, setVisibilityFilter, VisibilityFilters} from '../../redux/actions/todoAction'
 import AddTodo from './AddTodo'
 import TodoList from './TodoList'
 import Footer from './Footer'
 
 class Todo extends Component {
-  render() {
+  static propTypes = {
+    visibleTodos: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired
+    }).isRequired).isRequired,
+    visibilityFilter: PropTypes.oneOf([
+      'SHOW_ALL',
+      'SHOW_COMPLETED',
+      'SHOW_ACTIVE'
+    ]).isRequired
+  }
+
+  render () {
     console.log(this.props)
     // Injected by connect() call:
-    const { dispatch, visibleTodos, visibilityFilter } = this.props
+    const {dispatch, visibleTodos, visibilityFilter} = this.props
     return (
       <div>
         <AddTodo
           onAddClick={text =>
             dispatch(addTodo(text))
-          } />
+          }/>
         <TodoList
           todos={visibleTodos}
           onTodoClick={index =>
             dispatch(completeTodo(index))
-          } />
+          }/>
         <Footer
           filter={visibilityFilter}
           onFilterChange={nextFilter =>
             dispatch(setVisibilityFilter(nextFilter))
-          } />
+          }/>
       </div>
     )
   }
 }
 
+/*
 Todo.propTypes = {
   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
@@ -42,8 +55,9 @@ Todo.propTypes = {
     'SHOW_ACTIVE'
   ]).isRequired
 }
+*/
 
-function selectTodos(todos, filter) {
+function selectTodos (todos, filter) {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos
@@ -56,7 +70,7 @@ function selectTodos(todos, filter) {
 
 // Which props do we want to inject, given the global state?
 // Note: use https://github.com/faassen/reselect for better performance.
-function select(state) {
+function select (state) {
   console.log('contianer state', state)
   return {
     visibleTodos: selectTodos(state.todoApp.todos, state.todoApp.visibilityFilter),
