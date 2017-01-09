@@ -2,13 +2,15 @@ import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
 import store from '../store/'
 // import userReducer from 'REDUCER/user'
+import todoApp from '../../redux/reducers/todoReducer'
 
 // ================================
 // 同步的 Reducers（即应用初始化所必需的）
 // ================================
 const syncReduces = {
-  router: routerReducer
+  router: routerReducer,
   // ,userData: userReducer //有数据就依次添加reducer
+  todoApp: todoApp
 }
 
 // ================================
