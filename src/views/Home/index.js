@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {createStore} from 'redux'
-import Counter from '../../containers/CounterContainer'
-import Todo from './Todo'
+import Todo from '../../components/Todo/'
 /**
  * This is a reducer, a pure function with (state, action) => state signature.
  */
@@ -50,7 +49,6 @@ class Home extends Component {
       <div>
         home
         <Todo {...this.state}/>
-        <Counter counter="1"></Counter>
       </div>
     )
   }
