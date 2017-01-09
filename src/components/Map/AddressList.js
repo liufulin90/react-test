@@ -13,7 +13,7 @@ class AddressList extends Component {
         <ul>
           {
             this.props.mapdata.map(data=> {
-              return <li>Lat: {data.lat} Lon: {data.lon}</li>
+              return <li>Name: {data.name} Lat: {data.lnglat[1]} Lon: {data.lnglat[0]}</li>
             })
           }
         </ul>

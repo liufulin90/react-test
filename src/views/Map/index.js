@@ -5,11 +5,12 @@ import MapService from '../../services/MapService'
 
 class Map extends Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       mapdata: []
     }
+    console.log('constructor')
     MapService.getMapData().then(data => {
       this.setState({
         mapdata: data.data
@@ -17,7 +18,11 @@ class Map extends Component {
     })
   }
 
-  render() {
+  componentWillMount () {
+    console.log('componentWillMount')
+  }
+
+  render () {
     return (
       <div>
         <MapContainer {...this.state}/>

@@ -17,7 +17,8 @@
 <script src="/static/jquery.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=VRh24alNeWQaQbNVYHZueaVe"></script>
-<!--<script src="/static/baidu.map.js"></script>-->
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=eaecbad0feae43f1c7627c8764727e38"></script>
+<!-- <script src="/static/baidu.map.js"></script> -->
 {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
 <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
 {% } %}

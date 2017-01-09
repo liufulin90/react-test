@@ -6,7 +6,8 @@ class MapService {
    * @returns {Promise.<TResult>|*}
    */
   getMapData () {
-    let url = '/static/api/mapLatLon.json'
+    // let url = '/static/api/mapLatLon.json'
+    let url = '/static/api/gaodeMapLatLon.json'
 
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error=>console.error(error))
   }
