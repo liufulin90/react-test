@@ -19,7 +19,6 @@ class Todo extends Component {
   }
 
   render () {
-    console.log(this.props)
     // Injected by connect() call:
     const {dispatch, visibleTodos, visibilityFilter} = this.props
     return (

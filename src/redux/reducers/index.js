@@ -2,7 +2,7 @@ import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
 import store from '../store/'
 // import userReducer from 'REDUCER/user'
-import todoApp from '../../redux/reducers/todoReducer'
+import todoApp from './todoReducer'
 
 // ================================
 // 同步的 Reducers（即应用初始化所必需的）
