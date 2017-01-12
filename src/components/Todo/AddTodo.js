@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 
 export default class AddTodo extends Component {
-  render () {
+  render() {
     return (
       <div>
         <input type='text' ref='input'/>
@@ -12,10 +12,12 @@ export default class AddTodo extends Component {
     )
   }
 
-  handleClick (e) {
+  handleClick(e) {
     const node = this.refs.input
     const text = node.value.trim()
-    this.props.onAddClick(text)
+    if (!text) return
+    let time = new Date().getTime()
+    this.props.onAddClick({text, time})
     node.value = ''
   }
 }

@@ -4,6 +4,7 @@
 
 export const ADD_TODO = 'ADD_TODO'
 export const COMPLETE_TODO = 'COMPLETE_TODO'
+export const RESTORE_TODO = 'RESTORE_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 
 /*
@@ -20,12 +21,16 @@ export const VisibilityFilters = {
  * action 创建函数
  */
 
-export function addTodo(text) {
-  return { type: ADD_TODO, text }
+export function addTodo(data) {
+  return { type: ADD_TODO, ...data }
 }
 
 export function completeTodo(index) {
   return { type: COMPLETE_TODO, index }
+}
+
+export function restoreTodo(index) {
+  return { type: RESTORE_TODO, index}
 }
 
 export function setVisibilityFilter(filter) {

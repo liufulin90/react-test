@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions/todoAction'
+import { ADD_TODO, COMPLETE_TODO, RESTORE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions/todoAction'
 const { SHOW_ALL } = VisibilityFilters
 
 function visibilityFilter(state = SHOW_ALL, action) {
@@ -18,6 +18,7 @@ function todos(state = [], action) {
         ...state,
         {
           text: action.text,
+          time: action.time,
           completed: false
         }
       ]
@@ -26,6 +27,15 @@ function todos(state = [], action) {
         ...state.slice(0, action.index),
         Object.assign({}, state[action.index], {
           completed: true
+        }),
+        ...state.slice(action.index + 1)
+      ]
+    case RESTORE_TODO:
+      console.log(action)
+      return [
+        ...state.slice(0, action.index),
+        Object.assign({}, state[action.index], {
+          completed: false
         }),
         ...state.slice(action.index + 1)
       ]

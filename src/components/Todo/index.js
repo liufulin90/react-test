@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
-import {addTodo, completeTodo, setVisibilityFilter, VisibilityFilters} from '../../redux/actions/todoAction'
+import {addTodo, completeTodo, restoreTodo, setVisibilityFilter, VisibilityFilters} from '../../redux/actions/todoAction'
 import AddTodo from './AddTodo'
 import TodoList from './TodoList'
 import Footer from './Footer'
@@ -31,6 +31,9 @@ class Todo extends Component {
           todos={visibleTodos}
           onTodoClick={index =>
             dispatch(completeTodo(index))
+          }
+          onRestoreClick={index=>
+            dispatch(restoreTodo(index))
           }/>
         <Footer
           filter={visibilityFilter}
@@ -70,7 +73,6 @@ function selectTodos (todos, filter) {
 // Which props do we want to inject, given the global state?
 // Note: use https://github.com/faassen/reselect for better performance.
 function select (state) {
-  console.log('contianer state', state)
   return {
     visibleTodos: selectTodos(state.todoApp.todos, state.todoApp.visibilityFilter),
     visibilityFilter: state.visibilityFilter
