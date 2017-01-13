@@ -13,6 +13,8 @@ class MapContainer extends Component {
 
   componentWillMount () {
     // this.setState({})
+
+    console.log('@@', this.props.mapdata)
   }
 
   const

@@ -27,12 +27,10 @@ class AntNav extends Component {
 
     return (
       <div className="clearfix">
-        <div className="navbar-header">
+        <Menu onClick={e=>this.handleClick(e)} mode="horizontal" selectedKeys={[this.state.current]}>
           <IndexLink to='/' className="navbar-brand">
             RT
           </IndexLink>
-        </div>
-        <Menu onClick={e=>this.handleClick(e)} mode="horizontal" selectedKeys={[this.state.current]}>
           <Menu.Item key="home">
             <Link to='/home'>
               <Icon type="appstore"/> Home
@@ -45,7 +43,12 @@ class AntNav extends Component {
           </Menu.Item>
           <Menu.Item key="map">
             <Link to="/map">
-              <Icon type=""/>Map
+              <Icon type="environment-o"/>Map
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="games">
+            <Link to="/games">
+              <Icon type="smile-o"/>Games
             </Link>
           </Menu.Item>
           <SubMenu title={<span><Icon type="setting"/>Submenu</span>}>

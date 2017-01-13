@@ -3,6 +3,7 @@ import {routerReducer} from 'react-router-redux'
 import store from '../store/'
 // import userReducer from 'REDUCER/user'
 import todoApp from './todoReducer'
+import mapApp from './mapReducer'
 
 // ================================
 // 同步的 Reducers（即应用初始化所必需的）
@@ -10,7 +11,8 @@ import todoApp from './todoReducer'
 const syncReduces = {
   router: routerReducer,
   // ,userData: userReducer //有数据就依次添加reducer
-  todoApp: todoApp
+  todoApp: todoApp,
+  mapApp: mapApp
 }
 
 // ================================

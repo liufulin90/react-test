@@ -22,6 +22,10 @@ const routes = {
       component: require('../views/Work/').default
     },
     {
+      path: '/games',
+      component: require('../views/Games/').default
+    },
+    {
       path: 'redirect',
       component: require('../components/Redirect').default
     },
