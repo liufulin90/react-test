@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Todo from '../../components/Todo/'
 
-class Home extends Component {
+class HomeView extends Component {
 
   constructor(props) {
     super(props)
@@ -26,4 +26,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default HomeView

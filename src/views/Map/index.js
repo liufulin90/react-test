@@ -1,21 +1,10 @@
 import React, {Component} from 'react'
-import MapContainer from '../../components/Map/MapContainer'
-import AddressList from '../../components/Map/AddressList'
-import MapService from '../../services/MapService'
+import Map from '../../components/Map/'
 
-class Map extends Component {
+class MapView extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {
-      mapdata: []
-    }
-    console.log('constructor')
-    MapService.getMapData().then(data => {
-      this.setState({
-        mapdata: data.data
-      })
-    })
   }
 
   componentWillMount () {
@@ -25,11 +14,10 @@ class Map extends Component {
   render () {
     return (
       <div>
-        <MapContainer {...this.state}/>
-        <AddressList {...this.state}/>
+        <Map/>
       </div>
     )
   }
 }
 
-export default Map
+export default MapView

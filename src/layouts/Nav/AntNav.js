@@ -29,7 +29,7 @@ class AntNav extends Component {
       <div className="clearfix">
         <div className="navbar-header">
           <IndexLink to='/' className="navbar-brand">
-            React Test
+            RT
           </IndexLink>
         </div>
         <Menu onClick={e=>this.handleClick(e)} mode="horizontal" selectedKeys={[this.state.current]}>
