@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#ww_page {
+    overflow: hidden;
+    width: 100%;
+}
+
+#ww_rotate {
+    position: relative;
+    margin: 0 auto;
+    width: 640px;
+    height: 640px;
+}
+
+#ww_plate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 640px;
+    background: url(./assets/rotary_bg.png) center no-repeat;
+    background-size: 100% 100%;
+    transition: none;
+}
+
+#ww_arrow {
+    position: absolute;
+    top: 205px;
+    left: 50%;
+    z-index: 10;
+    margin-left: -75px;
+    width: 150px;
+    height: 190px;
+    background: url(./assets/rotary_arrow.png) center no-repeat;
+}

@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+// import {Rotate} from '../../components/Games/'
+import Rotate from '../../components/Games/Rotate/'
 
 class GamesView extends Component {
 
   constructor(props) {
     super(props)
+
   }
 
 
@@ -11,7 +14,7 @@ class GamesView extends Component {
     return (
       <div>
         Please add something...
-        Games
+        <Rotate/>
       </div>
     )
   }
