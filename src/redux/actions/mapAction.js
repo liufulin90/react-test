@@ -5,10 +5,17 @@ import MapService from '../../services/MapService'
  */
 export const SHOW_MAPDATA = 'SHOW_MAPDATA'
 
-export function showMapData() {
-  return {
+/**
+ * 获取地图位置信息数据
+ * @param dispatch
+ */
+const showMapData = dispatch => MapService.getMapData().then(data=>dispatch({
     type: SHOW_MAPDATA,
-    mapdata: MapService.getMapData()
-  }
+    ...data
+  })
+)
+
+export {
+  showMapData
 }
 

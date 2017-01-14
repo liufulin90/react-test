@@ -1,4 +1,5 @@
 import Ajax from '../utils/ajax'
+import {apiUrlConfig} from './ApiConfig'
 
 class WorkService {
   /**
@@ -6,7 +7,7 @@ class WorkService {
    * @returns {Promise.<TResult>|*}
    */
   getWorkExperience() {
-    let url = '/static/api/workExperience.json'
+    let url = apiUrlConfig().workExperience
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error => console.error(error))
   }
 
@@ -15,7 +16,7 @@ class WorkService {
    * @returns {Promise.<T>}
    */
   getProjectExperience() {
-    let url = '/static/api/projectExperience.json'
+    let url = apiUrlConfig().projectExperience
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error => console.error(error))
   }
 }

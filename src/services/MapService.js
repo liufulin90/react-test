@@ -1,4 +1,5 @@
 import Ajax from '../utils/ajax'
+import {apiUrlConfig} from './ApiConfig'
 
 class MapService {
   /**
@@ -6,8 +7,7 @@ class MapService {
    * @returns {Promise.<TResult>|*}
    */
   getMapData () {
-    // let url = '/static/api/mapLatLon.json'
-    let url = '/static/api/gaodeMapLatLon.json'
+    let url = apiUrlConfig().gaodeMapLatLon
 
     return Ajax({url: url, method: 'GET'}).then(response => response.json()).catch(error=>console.error(error))
   }

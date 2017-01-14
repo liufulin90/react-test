@@ -12,7 +12,8 @@ class Map extends Component {
       mapdata: []
     }
     const {dispatch} = this.props
-    dispatch(showMapData()).mapdata.then((res) => {
+
+    showMapData(dispatch).then((res) => {
       this.setState({
         mapdata: res.data
       })
