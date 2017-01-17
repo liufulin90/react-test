@@ -57,7 +57,7 @@ MyRotate.prototype = {
         _this.animated = false
         _this.end && _this.end()
       } else {
-        setTimeout(animate, 17)
+        setTimeout(animate, 20)
       }
     }
     animate()

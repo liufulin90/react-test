@@ -59,15 +59,14 @@ class Rotate extends Component {
       el: '#ww_plate',
       angle: 90,
       animateTo: data.angle,
-      duration: 1000,
-      easeing: 'easeInOutCirc',
+      duration: 5000,
+      easeing: 'easeOutSine',
       end: function () {
         console.timeEnd('计时')
         self.setState({
           isRotate: false
         })
-//        alert(data.prize)
-        console.info(data.prize)
+        console.log(data.prize)
       }
     })
   }
