@@ -1,6 +1,6 @@
 /**
  * LBS Rotate
- * Date: 2014-12-20
+ * Date: 2017-01-16
  * ==================================
  * opts.el 旋转对象(一个字符串的CSS选择器或者元素对象)
  * opts.angle 初始角度 默认0
@@ -10,8 +10,9 @@
  * opts.end 旋转完成 执行函数
  * ==================================
  **/
-var mRotate = function (opts) {
+function MyRotate(opts) {
   opts = opts || {}
+
   if (typeof opts.el === undefined) return
   this.el = typeof opts.el === 'string' ? document.querySelector(opts.el) : opts.el
   this.angle = opts.angle || 0
@@ -24,7 +25,7 @@ var mRotate = function (opts) {
   this.init()
 }
 
-mRotate.prototype = {
+MyRotate.prototype = {
   init: function () {
     this.rotate(this.angle)
     this.start()
@@ -102,4 +103,9 @@ mRotate.prototype = {
     }
   }
 }
+
+function mRotate (opts) {
+  return new MyRotate(opts)
+}
 export default mRotate
+

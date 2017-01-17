@@ -6,33 +6,41 @@
 #ww_page {
     overflow: hidden;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+#ww_box{
+    width: 200px;
+    height: 200px;
+}
 #ww_rotate {
     position: relative;
     margin: 0 auto;
-    width: 640px;
-    height: 640px;
+    /*width: 640px;
+    height: 640px*/
+    width: 100%;
+    height: 100%;
 }
 
 #ww_plate {
     position: absolute;
     top: 0;
     left: 0;
-    width: 640px;
-    height: 640px;
+    width: 100%;
+    height: 100%;
     background: url(./assets/rotary_bg.png) center no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
     transition: none;
 }
 
 #ww_arrow {
     position: absolute;
-    top: 205px;
-    left: 50%;
+    top: 26%;
+    left: 35%;
     z-index: 10;
-    margin-left: -75px;
-    width: 150px;
-    height: 190px;
-    background: url(./assets/rotary_arrow.png) center no-repeat;
+    width: 30%;
+    height: 40%;
+    background: url(./assets/rotary_arrow.png) center no-repeat ;
+    background-size: contain;
 }

@@ -43,7 +43,8 @@ class Rotate extends Component {
 
   const
   onArrowClick = () => {
-    if (this.state.isRotate) return
+    let self = this
+    if (self.state.isRotate) return
     this.setState({
       isRotate: true
     })
@@ -55,14 +56,14 @@ class Rotate extends Component {
     console.time('计时')
 
     mRotate({
-      el: 'ww_plate',
+      el: '#ww_plate',
       angle: 90,
       animateTo: data.angle,
       duration: 1000,
       easeing: 'easeInOutCirc',
       end: function () {
         console.timeEnd('计时')
-        this.setState({
+        self.setState({
           isRotate: false
         })
 //        alert(data.prize)
