@@ -46,11 +46,14 @@ class AntNav extends Component {
               <Icon type="environment-o"/>Map
             </Link>
           </Menu.Item>
-          <Menu.Item key="games">
-            <Link to="/games">
-              <Icon type="smile-o"/>Games
-            </Link>
-          </Menu.Item>
+          <SubMenu title={<span><Icon type="smile-o"/>Games & Animate</span>}>
+            <Menu.Item key="rotate">
+              <Link to="/games">Rotate</Link>
+            </Menu.Item>
+            <Menu.Item key="canvas">
+              <Link to="/canvas">Canvas</Link>
+            </Menu.Item>
+          </SubMenu>
           <SubMenu title={<span><Icon type="setting"/>Submenu</span>}>
             <MenuItemGroup title="Item 1">
               <Menu.Item key="setting:1">gourp 1-1</Menu.Item>
