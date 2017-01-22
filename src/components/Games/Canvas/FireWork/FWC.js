@@ -207,9 +207,10 @@ function FWC (options) {
     context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 
     var existingRockets = []
-    if (typeof rockets[0].pos.y == 'string') {
+    if (rockets[0] && typeof rockets[0].pos.y == 'string') {
       rockets.splice(0, 1)
     }
+    if (rockets.length == 0) return
     for (let i = 0; i < rockets.length; i++) {
       // update and render
       rockets[i].update()
