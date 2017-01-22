@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './rotate.scss'
-import mRotate from './mRotate'
+import MRotate from './mRotate'
 
 class Rotate extends Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class Rotate extends Component {
     console.log(num)
     console.time('计时')
 
-    mRotate({
+    return new MRotate({
       el: '#ww_plate',
       angle: 90,
       animateTo: data.angle,

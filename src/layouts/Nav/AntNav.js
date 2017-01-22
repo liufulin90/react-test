@@ -51,7 +51,7 @@ class AntNav extends Component {
               <Link to="/games">Rotate</Link>
             </Menu.Item>
             <Menu.Item key="canvas">
-              <Link to="/canvas">Canvas</Link>
+              <Link to="/canvas/firework">Canvas</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu title={<span><Icon type="setting"/>Submenu</span>}>

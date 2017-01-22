@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-// import {Rotate} from '../../components/Games/'
 import Rotate from '../../components/Games/Rotate/'
+import FireWorkView from './firework'
 
 class GamesView extends Component {
 
@@ -8,7 +8,6 @@ class GamesView extends Component {
     super(props)
 
   }
-
 
   render() {
     return (
@@ -21,3 +20,5 @@ class GamesView extends Component {
 }
 
 export default GamesView
+
+export {FireWorkView}

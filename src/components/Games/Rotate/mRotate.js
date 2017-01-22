@@ -10,7 +10,7 @@
  * opts.end 旋转完成 执行函数
  * ==================================
  **/
-function MyRotate(opts) {
+function MRotate(opts) {
   opts = opts || {}
 
   if (typeof opts.el === undefined) return
@@ -25,7 +25,7 @@ function MyRotate(opts) {
   this.init()
 }
 
-MyRotate.prototype = {
+MRotate.prototype = {
   init: function () {
     this.rotate(this.angle)
     this.start()
@@ -104,8 +104,5 @@ MyRotate.prototype = {
   }
 }
 
-function mRotate (opts) {
-  return new MyRotate(opts)
-}
-export default mRotate
+export default MRotate
 
