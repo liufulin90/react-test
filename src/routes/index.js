@@ -26,8 +26,14 @@ const routes = {
       component: require('../views/Games/').default
     },
     {
-      path: '/canvas/firework',
-      component: require('../views/Games/').FireWorkView
+      path: '/canvas',
+      // component: require('../views/Games/').FireWorkView,
+      childRoutes: [
+        {
+          path: 'firework',
+          component: require('../views/Games/').FireWorkView
+        }
+      ]
     },
     {
       path: 'redirect',

@@ -30,10 +30,11 @@ class Map extends Component {
     )
   }
 }
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
     mapdata: state.mapdata
   }
 }
+
 // export default Map
 export default connect(mapStateToProps)(Map)

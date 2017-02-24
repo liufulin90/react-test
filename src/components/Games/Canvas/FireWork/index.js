@@ -36,11 +36,11 @@ class FireWork extends Component {
     return fwc
   }
 
+  componentDidMount() {
+    this.initFW()
+  }
 
   render() {
-    setTimeout(() => {
-      this.initFW()
-    }, 1000)
     let demoStyle = {
       position: 'relative',
       background: 'black',
